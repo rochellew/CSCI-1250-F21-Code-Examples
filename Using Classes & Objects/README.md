@@ -1,6 +1,12 @@
 # Using Classes & Objects
 
-## Have We Seen Classes & Objects?
+## Table of Contents
+1. [Have we Seen Classes & Objects?](#have-we-seen-classes-and-objects)
+2. [Some New Classes & How to Use Their Objects](#some-new-classes-and-how-to-use-their-objects)
+    * [The `Random` Class](#the-random-class)
+    * [Dialog Boxes Using `JOptionPane`](#dialog-boxes-using-joptionpane)
+
+## Have We Seen Classes and Objects?
 We have used some classes and objects of those classes up to this point (e.g., the `String`, `Math`, and `Scanner` classes). 
 
 Remember that in order to use an object, we need to do two things.
@@ -8,7 +14,7 @@ Remember that in order to use an object, we need to do two things.
 1. Declare the reference variable
 2. Create the object in memory, and assign its memory address to the reference variable
 
-After these steps have been performed,  we  can use t he reference variable to work with the object.
+After these steps have been performed,  we  can use the reference variable to work with the object.
 
 Here's an example of how we can create an object from the `Scanner` class. 
 
@@ -16,7 +22,7 @@ Here's an example of how we can create an object from the `Scanner` class.
 Scanner kb = new Scanner(System.in);
 ```
 
-## Some New Classes & How to Use Their Objects
+## Some New Classes and How to Use Their Objects
 This week, we'll learn how to use two more classes, specifically those classes listed below.
 * The `Random` class
 * The `JOptionPane` class
@@ -142,6 +148,60 @@ The argument passed to the method is a message to display in the dialog box. Thi
 
 ![image](https://user-images.githubusercontent.com/32746298/136834469-f03790cd-de45-4678-870a-5f6cf208e6ec.png)
 
+The following program asks the user for their name and will display it to the screen. It uses both an input and message dialog box.
 
+```java
+import javax.swing.JOptionPane;
+
+public class WhoAreYou
+{
+    public static void main(String[] args)
+    {
+        String name;
+        name = JOptionPane.showInputDialog("What is your name?");
+        
+        JOptionPane.showMessageDialog(null,"Hello, " + name + "!");
+        
+        System.exit(0);
+    }
+}
+```
+
+Notice  the last statement in the `main` method:
+
+```java
+System.exit(0);
+```
+
+This statement causes the program to end, and is **required** if you use the `JOptionPane` class to display dialog boxes. Unlike a console program, a program that uses `JOptionPane` does not automatically stop executing when the end of the main method is reached, because the `JOptionPane` class causes an additional task to run in the JVM. If the `System.exit` method is not called, this task, also known as a _thread_, will continue to execute, even after the end of the `main` method has been reached
+
+### Converting string input to numbers
+Unlike the `Scanner` class, the `JOptionPane` class does not have different methods for reading values of different types as input. The `showInputDialog` method always returns the user's input as a `String`, even if the user enters numeric data. 
+
+For example, if the user enters the number 72 into an input dialog, the `showInputDialog` method will return the string `"72"`. This can be a problem if you want to  use the user's input in numeric operations because, as you know, you cannot perform numeric operations on strings.
+
+In such a case, you **must** convert the input to a numeric value. To convert a string value to a numeric value, you use one of the methods listed below.
+
+Method               | Use This Method To... 
+-------------------- | ---------------------------- 
+`Byte.parseByte`     | Convert a string to a `byte`
+`Double.parseDouble` | Convert a string to a `double`
+`Float.parseFloat`   | Convert a string to a `float`
+`Integer.parseInt`   | Convert a string to an `int`
+`Long.parseLong`     | Convert a string to a `long`
+`Short.parseShort`   | Convert a string to a `short`
+
+The code example below shows how you would convert the value returned from the `JOptionPane.showInputDialog` method to an `int` using the `Integer.parseInt` method.
+
+```java
+int number;
+String str;
+str = JOptionPane.showInputDialog("Enter the retail price.");
+price = Double.parseDouble(str);
+```
+
+The last line uses a parsing method to convert the string value into an integer value. Remember we **must do this** any time we want to gather numeric input from a user using the `JOptionPane.showInputDialog` method.
+
+The code examples in this repository will reinforce these topics and will be generated in the lab session on Thursday, 10/14/2021. 
 
 

@@ -79,7 +79,7 @@ public class RandomPercent
 #### Generating a random value in a given range
 It is often the case that we want to generate a random value in a given range (e.g., I want a random number between 1 and 10). 
 
-To do this, need to use a formula (more math stuff, yay 😅). The formula to generate a random number in a range has a few variables we need to keep track of.
+To do this, we need to use a formula (more math stuff, yay 😅). The formula to generate a random number in a range has a few variables we need to keep track of.
 
 * Max - the maximum value in the range
 * Min - the minimum value in the range

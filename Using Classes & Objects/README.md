@@ -1,11 +1,5 @@
 # Using Classes & Objects
 
-## Table of Contents
-1. [Have we Seen Classes & Objects?](#have-we-seen-classes-and-objects)
-2. [Some New Classes & How to Use Their Objects](#some-new-classes-and-how-to-use-their-objects)
-    * [The `Random` Class](#the-random-class)
-    * [Dialog Boxes Using `JOptionPane`](#dialog-boxes-using-joptionpane)
-
 ## Have We Seen Classes and Objects?
 We have used some classes and objects of those classes up to this point (e.g., the `String`, `Math`, and `Scanner` classes). 
 
@@ -36,9 +30,9 @@ See the table below for more details on generating numbers based on data type.
 
 `Random` method | Numeric Range
 --------------- | ---------------
-`nextInt()`     | -2,147,483,648 - 2,147,483,647
-`nextDouble()`  | 0.0 - 1.0
-`nextLong()`    | MASSIVE range
+`nextInt()`     | -2,147,483,648 &ndash; 2,147,483,647
+`nextDouble()`  | 0.0 &ndash; 1.0
+`nextLong()`    | MASSIVE range &ndash; MASSIVE range
 
 By using the `Random` class methods show above with no argument values (values inside the parentheses), the number generated will be at random within that range.
 
@@ -54,7 +48,7 @@ After we  import the `Random` class, we need to create an object of that  class 
 Random rand = new Random();
 ```
 
-Let's say we wanted to generate a random percentage from 0 - 100%. How would we go about doing that? Well, looking at the table above, we can see that the `nextDouble` method generates a value from 0.0 - 1.0. If we multiply that by 100, we'd have a random percentage! Below is a code example of how we would do that.
+Let's say we wanted to generate a random percentage from 0 - 100%. How would we go about doing that? Well, looking at the table above, we can see that the `nextDouble` method generates a value from 0.0 &ndash; 1.0. If we multiply that by 100, we'd have a random percentage! Below is a code example of how we would do that.
 
 ```java
 // import the Random class
@@ -70,7 +64,7 @@ public class RandomPercent
         // declare an integer variable to store the random double
         double number;
     
-        // obtain a random value from 0.0 - 1.0
+        // obtain a random value from 0.0 &ndash; 1.0
         number = rand.nextDouble();
     
         // multiply by 100 to convert to a percentage
@@ -96,7 +90,7 @@ The formula to generate a random number in a range is shown below.
 
 **Note** : This formula is INCLUSIVE of the maximum value.
 
-Let's do a specific example.  I want a random number in the range of 50 - 75. The code to generate this number is shown below. Assume I have created a class and `main` method header as well as imported & created a `Random` object reference variable.
+Let's do a specific example.  I want a random number in the range of 50 &ndash; 75. The code to generate this number is shown below. Assume I have created a class and `main` method header as well as imported & created a `Random` object reference variable.
 
 ```java
 // Formula

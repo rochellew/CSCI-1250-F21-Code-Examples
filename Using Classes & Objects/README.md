@@ -48,7 +48,7 @@ After we  import the `Random` class, we need to create an object of that  class 
 Random rand = new Random();
 ```
 
-Let's say we wanted to generate a random percentage from 0 - 100%. How would we go about doing that? Well, looking at the table above, we can see that the `nextDouble` method generates a value from 0.0 &ndash; 1.0. If we multiply that by 100, we'd have a random percentage! Below is a code example of how we would do that.
+Let's say we wanted to generate a random percentage from 0% &ndash; 100%. How would we go about doing that? Well, looking at the table above, we can see that the `nextDouble` method generates a value from 0.0 &ndash; 1.0. If we multiply that by 100, we'd have a random percentage! Below is a code example of how we would do that.
 
 ```java
 // import the Random class
@@ -88,7 +88,7 @@ The formula to generate a random number in a range is shown below.
 
 `((max - min) + 1) + min`
 
-**Note** : This formula is INCLUSIVE of the maximum value.
+**Note** : This formula is _INCLUSIVE_ of the maximum value.
 
 Let's do a specific example.  I want a random number in the range of 50 &ndash; 75. The code to generate this number is shown below. Assume I have created a class and `main` method header as well as imported & created a `Random` object reference variable.
 

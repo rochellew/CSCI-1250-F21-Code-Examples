@@ -95,7 +95,7 @@ Let's do a specific example.  I want a random number in the range of 50 &ndash; 
 ```java
 // Formula
 // nextInt((max - min) + 1) +  min
-// nextInt((75 - 50) + 1) + min
+// nextInt((75 - 50) + 1) + 50
 // nextInt(26) + 50
 int number = rand.nextInt(26) + 50;
 ```

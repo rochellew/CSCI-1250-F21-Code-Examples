@@ -34,7 +34,7 @@ See the table below for more details on generating numbers based on data type.
 `nextDouble()`  | 0.0 &ndash; 1.0
 `nextLong()`    | MASSIVE range &ndash; MASSIVE range
 
-By using the `Random` class methods show above with no argument values (values inside the parentheses), the number generated will be at random within that range.
+By using the `Random` class methods shown above with no argument values (values inside the parentheses), the number generated will be at random within that range.
 
 In order for us to use these methods, we first need to import the `Random` class, just like we do the `Scanner` class. The `import` statement to do this is shown below.
 

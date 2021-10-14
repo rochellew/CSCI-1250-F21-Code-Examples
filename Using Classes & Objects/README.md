@@ -200,7 +200,7 @@ Method               | Use This Method To...
 The code example below shows how you would convert the value returned from the `JOptionPane.showInputDialog` method to an `int` using the `Integer.parseInt` method.
 
 ```java
-int number;
+double price;
 String str;
 str = JOptionPane.showInputDialog("Enter the retail price.");
 price = Double.parseDouble(str);
